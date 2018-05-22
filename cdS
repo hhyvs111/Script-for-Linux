@@ -1,0 +1,5 @@
+#!/bin/bash
+#cd script
+cd /root/script
+pwd
+

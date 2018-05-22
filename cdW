@@ -1,0 +1,5 @@
+#!/bin/bash
+# cd wordpress dir
+cd /var/www/html/wordpress
+pwd
+
