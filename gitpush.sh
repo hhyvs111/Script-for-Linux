@@ -8,7 +8,6 @@ echo "push start!"
 #->git push origin master提交文件至远端仓库master分支（可改）。
 
 #那么首先运行脚本的情况是在仓库目录，那么就不用判断是否有目录了，但是要判断下当前目录是否创建了仓库
-
 isRepo=$(ls -a | grep .git)
 git=".git"
 
@@ -18,6 +17,10 @@ then
 	echo "This dir is not git repositories!"
  	exit 1
 fi
+
+#要先检查，pull一下，和远程仓库对比是否相同，不然如果远程修改了就推不上去了。
+echo "check the remote repo "
+git pull
 
 echo "begin add file to cache!"
 git add *
