@@ -25,6 +25,11 @@ git pull
 echo "begin add file to cache!"
 git add *
 echo "Enter your message for this commit:"
+#要处理一下这个信息，得输入空格啊，不然读的时候不完整
+
+#更改IFS环境变量，使其只能识别换行符
+IFS=$'\n'
+
 read message_commit
 git commit -m $message_commit
 #提交到主分支
